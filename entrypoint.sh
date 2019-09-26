@@ -3,7 +3,7 @@
 set -e
 
 # Respect RELEASE_VERSION if specified
-[ -n "$RELEASE_VERSION" ] || export RELEASE_VERSION="${SENTRY_PROJECT}@$(git describe --always --long)"
+[ -n "$RELEASE_VERSION" ] || export RELEASE_VERSION="$(git rev-parse HEAD)"
 
 # Capture output
 output=$(
