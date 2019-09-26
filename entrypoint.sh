@@ -9,7 +9,6 @@ set -e
 output=$(
 sentry-cli releases new $RELEASE_VERSION
 sentry-cli releases set-commits --auto $RELEASE_VERSION
-sentry-cli releases deploys $RELEASE_VERSION new -e $ENVIRONMENT
 )
 
 # Preserve output for consumption by downstream actions
