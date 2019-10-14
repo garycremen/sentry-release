@@ -3,7 +3,7 @@
 set -e
 
 # Respect RELEASE_VERSION if specified
-[ -n "$RELEASE_VERSION" ] || export RELEASE_VERSION="$(git rev-parse HEAD)"
+export RELEASE_VERSION="${PROJECT_NAME}@$(git rev-parse HEAD)"
 
 # Capture output
 output=$(
